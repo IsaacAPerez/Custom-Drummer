@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drummer View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrummerViewController" customModule="Drummer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-VN-8bg">
+                                <rect key="frame" x="254" y="827" width="150" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="HRc-4D-AXa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="iN9-sQ-XYq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Acoustic"/>
+                                    <segment title="Electric"/>
+                                </segments>
+                                <connections>
+                                    <action selector="drumKitWasChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2d1-Nq-6df"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drum Kit Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCd-fd-o3E">
+                                <rect key="frame" x="10" y="827" width="150" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="GeQ-AT-58c"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="P93-MF-RXO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IJl-VC-CdP">
+                                <rect key="frame" x="10" y="54" width="394" height="763"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-3m-bho">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="247.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2W-nQ-y2d">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvH-g9-agd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvD-CX-4mD">
+                                                <rect key="frame" x="134.66666666666666" y="0.0" width="124.66666666666666" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZi-An-B2O"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxD-HM-64f">
+                                                <rect key="frame" x="269.33333333333331" y="0.0" width="124.66666666666669" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rm-U3-lxR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-F3-DB6">
+                                        <rect key="frame" x="0.0" y="257.66666666666669" width="394" height="247.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93q-pD-yjN">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YU7-eD-6D9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-D4-JmA">
+                                                <rect key="frame" x="134.66666666666666" y="0.0" width="124.66666666666666" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVq-bz-h2w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88V-Y0-iuh">
+                                                <rect key="frame" x="269.33333333333331" y="0.0" width="124.66666666666669" height="247.66666666666666"/>
+                                                <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qT8-IQ-olT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-e0-9Ap">
+                                        <rect key="frame" x="0.0" y="515.33333333333337" width="394" height="247.66666666666663"/>
+                                        <color key="backgroundColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3iX-7m-qbf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EaS-F3-DB6" firstAttribute="top" secondItem="bbM-3m-bho" secondAttribute="bottom" constant="10" id="C8d-af-a4Z"/>
+                                    <constraint firstItem="fXe-e0-9Ap" firstAttribute="top" secondItem="EaS-F3-DB6" secondAttribute="bottom" constant="10" id="QrR-1m-aoX"/>
+                                    <constraint firstItem="fXe-e0-9Ap" firstAttribute="top" secondItem="EaS-F3-DB6" secondAttribute="bottom" constant="10" id="jj8-CY-KHd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.1316433276" blue="0.058280193199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uOQ-VN-8bg" secondAttribute="trailing" constant="10" id="0dK-rh-Byc"/>
+                            <constraint firstItem="IJl-VC-CdP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3Si-Jj-Gqr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJl-VC-CdP" secondAttribute="trailing" constant="10" id="7cO-FA-kEd"/>
+                            <constraint firstItem="IJl-VC-CdP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="If2-ig-bLc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uOQ-VN-8bg" secondAttribute="bottom" constant="10" id="ItH-rd-IY2"/>
+                            <constraint firstItem="XCd-fd-o3E" firstAttribute="top" secondItem="IJl-VC-CdP" secondAttribute="bottom" constant="10" id="S7E-Gc-TZU"/>
+                            <constraint firstItem="uOQ-VN-8bg" firstAttribute="top" secondItem="IJl-VC-CdP" secondAttribute="bottom" constant="10" id="gbV-9U-2Xc"/>
+                            <constraint firstItem="XCd-fd-o3E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kP7-EQ-eDI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>
