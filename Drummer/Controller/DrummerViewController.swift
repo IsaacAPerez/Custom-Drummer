@@ -14,8 +14,6 @@ class DrummerViewController: UIViewController {
     
     // Drum Kit 0 (Acoustic Drum Kit)
     let drumKit0 = DrumKit(drumKitID: 0)
-    // Drum Kit 1 (Electronic Drum Kit)
-    let drumKit1 = DrumKit(drumKitID: 1)
     
     // The currently selected drum kit (default = 0)
     var currentDrumKit: DrumKit?
